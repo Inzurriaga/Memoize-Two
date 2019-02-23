@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from "./Login"
 import Header from "./Header"
+import MainContent from "./MainContent"
 
 class App extends Component {
   constructor(){
@@ -13,7 +14,6 @@ class App extends Component {
 
   componentDidMount() {
     let user = JSON.parse(localStorage.getItem("player"))
-    console.log(user)
     if(user !== null){
       console.log("there is players")
       this.setState({
@@ -32,6 +32,11 @@ class App extends Component {
     })
   }
 
+  loginToAccount = (player) => {
+    this.setState({
+      currentuser: player
+    })
+  }
 
 
   render() {
@@ -39,8 +44,8 @@ class App extends Component {
       <div className="App">
         <Header />
         { !this.state.currentuser ? 
-          <Login createNewAccount={this.createNewAccount}/> :
-          console.log("hello")
+          <Login createNewAccount={this.createNewAccount} users={this.state.users} loginToAccount={this.loginToAccount}/> :
+          <MainContent />
         }
       </div>
     );

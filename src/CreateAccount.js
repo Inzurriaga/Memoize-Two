@@ -36,9 +36,12 @@ export default class CreateAccount extends Component{
 
     avatar = e => {
         console.log(e.target.value)
+        this.setState({
+            avatar: e.target.value
+        })
     }
 
-    login = () => {
+    switchToLogin = () => {
         this.props.toggle()
     }
 
@@ -53,7 +56,7 @@ export default class CreateAccount extends Component{
     render(){
         return(
             <form className="createaccount-section" onSubmit={this.createAccount}>
-            <input type="button" onClick={this.login} value="login"></input>
+            <input type="button" onClick={this.switchToLogin} value="login"></input>
                 <h2>CREATE ACCOUNT</h2>
                 <input onChange={this.username} type="text" placeholder="Username"></input>
                 <input onChange={this.password}  type="password" placeholder="Password"></input>

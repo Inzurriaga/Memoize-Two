@@ -10,31 +10,40 @@ export default class SignIn extends Component{
     }
 
     username = e => {
-        console.log("username", e.target.value)
         this.setState({
             username: e.target.value
         })
     }
     
     password = e => {
-        console.log("password", e.target.value)
         this.setState({
             password: e.target.value
         })
     } 
 
-    createAccount = () => {
+    swtichToCreateAccount = () => {
         this.props.toggle()
     }
 
-    Login = () => {
-        console.log("log in submit works")
+    login = e => {
+        e.preventDefault()
+        let user = this.props.users.find(user => {
+            if(user.name === this.state.username && user.password === this.state.password){
+                console.log(user)
+                return user;
+            }
+        })
+       if(typeof user === "object"){
+           this.props.loginToAccount(user)
+       }else{
+            console.log("error message")
+       }
     }
 
     render() {
         return(
             <form className="signin-section" onSubmit={this.login}>
-            <input type="button" onClick={this.createAccount} value="create account"></input>
+            <input type="button" onClick={this.swtichToCreateAccount} value="create account"></input>
                 <h2>LOGIN</h2>
                 <input onChange={this.username} type="text" placeholder="Username"></input>
                 <input onChange={this.password} type="password" placeholder="Password"></input>
