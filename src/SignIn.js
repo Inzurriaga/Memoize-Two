@@ -23,6 +23,10 @@ export default class SignIn extends Component{
         })
     } 
 
+    createAccount = () => {
+        this.props.toggle()
+    }
+
     Login = () => {
         console.log("log in submit works")
     }
@@ -30,8 +34,10 @@ export default class SignIn extends Component{
     render() {
         return(
             <form className="signin-section" onSubmit={this.login}>
-                <input onChange={this.username} type="text"></input>
-                <input onChange={this.password} type="password"></input>
+            <input type="button" onClick={this.createAccount} value="create account"></input>
+                <h2>LOGIN</h2>
+                <input onChange={this.username} type="text" placeholder="Username"></input>
+                <input onChange={this.password} type="password" placeholder="Password"></input>
                 <input type="submit" value="Log In"></input>
             </form>
         )

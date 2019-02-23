@@ -1,0 +1,40 @@
+.createaccount-section {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    //
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: rgb(28, 28 ,28);
+    margin: 10px auto;
+    width: 100%;
+    height: 500px;
+    border-radius: 25px;
+    input[type="text"], input[type="password"] {
+        text-align: center;
+        font-size: 1.5em;
+        color: white;
+        padding: 20px;
+        width: 60%;
+        border-radius: 50px;
+        margin: 10px auto;
+        border: 2px solid rgb(50, 65, 80);
+        background-color: rgb(28, 28 ,28);
+        display: block;
+        &::placeholder {
+            text-align: center;
+            color: white;
+        }
+    }
+    input[type="submit"] {
+        background-color: rgb(28, 28 ,28);
+        border: 2px solid rgb(65, 90, 70);
+        text-align: center;
+        font-size: 1.5em;
+        color: white;
+        padding: 20px;
+        width: 60%;
+        border-radius: 50px;
+    }
+}
