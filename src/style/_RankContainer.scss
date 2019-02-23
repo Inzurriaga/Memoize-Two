@@ -1,0 +1,16 @@
+.rank-section {
+    color: white;
+    padding: 20px;
+    background-color: rgb(28, 28 ,28);
+    width: 80%;
+    height: 300px;
+    margin: 10px auto;
+    border-radius: 25px;
+    ul{
+        overflow: scroll;
+        li {
+            display: flex;
+            justify-content: space-between
+        }
+    }   
+}

@@ -8,7 +8,8 @@ export default class MainContent extends Component{
             <div>
                 {
                     this.props.page === "home" ?
-                  <HomePage /> :
+                  <HomePage users={this.props.users}
+                            user={this.props.user}/> :
                   <TrainPage />  
                 }
             </div>

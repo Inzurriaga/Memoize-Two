@@ -21,21 +21,18 @@ export default class CreateAccount extends Component{
     }
 
     username = e => {
-        console.log("username", e.target.value)
         this.setState({
             username: e.target.value
         })
     }
     
     password = e => {
-        console.log("password", e.target.value)
         this.setState({
             password: e.target.value
         })
     }
 
     avatar = e => {
-        console.log(e.target.value)
         this.setState({
             avatar: e.target.value
         })

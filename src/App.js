@@ -8,7 +8,8 @@ class App extends Component {
     super();
     this.state = {
       users: [],
-      currentuser: undefined
+      currentuser: undefined,
+      page: "home"
     }
   }
 
@@ -45,7 +46,9 @@ class App extends Component {
         <Header />
         { !this.state.currentuser ? 
           <Login createNewAccount={this.createNewAccount} users={this.state.users} loginToAccount={this.loginToAccount}/> :
-          <MainContent />
+          <MainContent page={this.state.page}
+                        user={this.state.user}
+                        users={this.state.users}/>
         }
       </div>
     );

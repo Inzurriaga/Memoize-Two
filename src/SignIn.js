@@ -28,10 +28,7 @@ export default class SignIn extends Component{
     login = e => {
         e.preventDefault()
         let user = this.props.users.find(user => {
-            if(user.name === this.state.username && user.password === this.state.password){
-                console.log(user)
-                return user;
-            }
+            return user.name === this.state.username && user.password === this.state.password
         })
        if(typeof user === "object"){
            this.props.loginToAccount(user)
