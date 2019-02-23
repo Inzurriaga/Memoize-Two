@@ -50,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header togglePage={this.togglePage}
-                user={this.currentuser}/>
+                user={this.state.currentuser}/>
         { !this.state.currentuser ? 
           <Login createNewAccount={this.createNewAccount} users={this.state.users} loginToAccount={this.loginToAccount}/> :
           <MainContent page={this.state.page}

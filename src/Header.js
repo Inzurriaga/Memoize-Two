@@ -8,11 +8,26 @@ export default class Header extends Component{
         }
     }
 
+    togglePage = e => {
+        this.props.togglePage(e.target.value)
+    }
     render(){
+        if(this.props.user !== undefined){
         return(
             <div className="header-section">
-                <h1>Title here</h1>
+                    <h1>Title here</h1>
+                    <nav>
+                    <input onClick={this.togglePage} type="button" value="home"></input>
+                    <input onClick={this.togglePage} type="button" value="train"></input>
+                    </nav>
             </div>
         )
+        }else{
+            return(
+                <div className="header-section">
+                    <h1>Title here</h1>
+                </div>
+            ) 
+        }
     }
 }
