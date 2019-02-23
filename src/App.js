@@ -39,15 +39,22 @@ class App extends Component {
     })
   }
 
+  togglePage = (page) => {
+    this.setState({
+      page: page
+    })
+  }
+
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header togglePage={this.togglePage}
+                user={this.currentuser}/>
         { !this.state.currentuser ? 
           <Login createNewAccount={this.createNewAccount} users={this.state.users} loginToAccount={this.loginToAccount}/> :
           <MainContent page={this.state.page}
-                        user={this.state.user}
+                        user={this.state.currentuser}
                         users={this.state.users}/>
         }
       </div>
