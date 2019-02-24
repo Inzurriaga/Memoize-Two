@@ -7,16 +7,21 @@ export default class TrainPage extends Component{
     constructor(){
         super();
         this.state = {
-            
+            toggle: false
         }
     }
 
     render(){
         return (
             <div>
-                <Filter />
-                <QuestionContainer />
-                <QuestionElement />
+                {
+                    !this.state.toggle ?
+                        <div>
+                            <Filter />
+                            <QuestionContainer />
+                        </div> :
+                        <QuestionElement />
+                }
             </div>
         )
     }

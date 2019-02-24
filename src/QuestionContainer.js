@@ -15,7 +15,7 @@ export default class QuestionContainer extends Component{
                 {
                     questions.map((questions) => {
                         return(
-                            <li>{questions.title}</li>
+                            <li key={questions.id}>{questions.title}</li>
                         )
                     })
                 }

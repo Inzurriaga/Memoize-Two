@@ -12,7 +12,7 @@ export default function RankContainer
             {
               sortUsers.map((user, index) => {
                 return (
-                    <li>
+                    <li key={index}>
                         <p>#{index + 1}</p>
                         <p> {user.name} </p>
                         <p>{user.completed.length} completed</p>

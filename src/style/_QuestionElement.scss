@@ -1,0 +1,25 @@
+.questionElement-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "instruction editor",
+        "instruction result"
+}
+
+.instructions-section {
+    color: white;
+    background-color: rgb(28, 28 ,28);
+    border-radius: 25px;
+    width: 60%;
+    box-sizing: border-box;
+    right: 100px;
+    padding: 30px;
+    top: 130px; 
+    grid-area: "instruction";
+}
+
+.editor {
+    border-radius: 25px 25px 0px 0px;
+    grid-area: "editor";
+}
