@@ -11,6 +11,12 @@ export default class TrainPage extends Component{
         }
     }
 
+    QuestionSelected = (question) => {
+        this.setState({
+            toggle: true
+        })
+    }
+
     render(){
         return (
             <div>
@@ -18,7 +24,7 @@ export default class TrainPage extends Component{
                     !this.state.toggle ?
                         <div>
                             <Filter />
-                            <QuestionContainer />
+                            <QuestionContainer QuestionSelected={this.QuestionSelected}/>
                         </div> :
                         <QuestionElement />
                 }

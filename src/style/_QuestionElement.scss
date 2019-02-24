@@ -7,19 +7,22 @@
         "instruction result"
 }
 
-.instructions-section {
+.instructions {
     color: white;
     background-color: rgb(28, 28 ,28);
     border-radius: 25px;
     width: 60%;
     box-sizing: border-box;
-    right: 100px;
     padding: 30px;
-    top: 130px; 
-    grid-area: "instruction";
+    grid-area: instruction;
 }
 
 .editor {
     border-radius: 25px 25px 0px 0px;
-    grid-area: "editor";
+    grid-area: editor;
+    height: 200px;
+}
+
+.result {
+    grid-area: result;
 }

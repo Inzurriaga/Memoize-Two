@@ -9,13 +9,17 @@ export default class QuestionContainer extends Component{
         }
     }
 
+    elementSelected = (question) => {
+        this.props.QuestionSelected(question)
+    }
+
     render(){
         return(
             <ul className="questionContainer-section">
                 {
-                    questions.map((questions) => {
+                    questions.map((question) => {
                         return(
-                            <li key={questions.id}>{questions.title}</li>
+                            <li onClick={() => {this.elementSelected(question)}} key={question.id}>{question.title}</li>
                         )
                     })
                 }

@@ -16,7 +16,7 @@ export default class QuestionElement extends Component{
     render(){
         return(
             <div className="questionElement-section">
-                <section className="instructions-section">
+                <section className="instructions">
                     <h2>Instructions</h2>
                     <p>{this.props.instructions}</p>
                 </section>
@@ -40,7 +40,7 @@ export default class QuestionElement extends Component{
                tabSize: 2,
                }}
                />
-               <div>
+               <div className="result">
                    <p></p>
                </div>
             </div>
