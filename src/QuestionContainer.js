@@ -2,15 +2,8 @@ import React, { Component } from "react"
 import questions from "./MockData"
 
 export default class QuestionContainer extends Component{
-    constructor(){
-        super();
-        this.state = {
-            true: true
-        }
-    }
-
     questionSelected = (question) => {
-        this.props.questionSelected(question)
+        this.props.toggleToQuestion(question)
     }
 
     render(){
@@ -18,10 +11,18 @@ export default class QuestionContainer extends Component{
             <ul className="questionContainer-section">
                 {
                     questions.map((question) => {
-                        return(
-                            <li onClick={() => { this.questionSelected(question) }}
-                                 key={question.id}>{question.title}</li>
-                        )
+                        if(this.props.user.completed.includes(question.id)){
+                            return(
+                                <li className="user-completed" onClick={() => { this.questionSelected(question) }}
+                                     key={question.id}>{question.title}</li>
+                            )     
+                        }else{
+                            return(
+                                <li className="user-notCompleted" onClick={() => { this.questionSelected(question) }}
+                                     key={question.id}>{question.title}</li>
+                            )
+                        }
+        
                     })
                 }
             </ul>

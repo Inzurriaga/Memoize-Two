@@ -16,6 +16,10 @@
         background-color: rgb(41, 41, 41);
         cursor: pointer;
     }
+    &::placeholder {
+        text-align: center;
+        color: rgb(59, 59, 59);
+    }
 }
 
 @mixin blueButton() {
@@ -27,7 +31,7 @@
     border-radius: 50px;
     &:hover {
         background-color: rgb(41, 41, 41);
-        cursor: pointer;
+        cursor: text;
     }
 }
 

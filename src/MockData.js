@@ -16,14 +16,6 @@ const questions = [
         id: 2
     },
     {
-        title: "return object",
-        type: "object",
-        instructions: "return an object that has a key of name with the value hello ",
-        answer: { name: "hello"},
-        startup: "function object() {}",
-        id: 3
-    },
-    {
         title: "return an array",
         type: "array",
         instructions: "return an array with three element of 1 2 3",

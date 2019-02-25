@@ -25,9 +25,14 @@ export default class Filter extends Component{
         })
     }
 
+    submitFilter = e => {
+        e.preventDefault()
+        this.props.submitFilter(this.state.Progress, this.state.selectOption)
+    }
+
     render(){
         return(
-            <form className="filter-section">
+            <form onSubmit={this.submitFilter} className="filter-section">
                 <p>Progress</p>
                 <select onChange={this.selectedProgress}>
                     <option value="all">all</option>
@@ -40,10 +45,6 @@ export default class Filter extends Component{
                         <input onChange={this.selectedDatatype} type="checkbox" value="array"></input>
                     </label>
                     <label>
-                        object
-                        <input onChange={this.selectedDatatype} type="checkbox" value="object"></input>
-                    </label>
-                    <label>
                         number
                         <input onChange={this.selectedDatatype} type="checkbox" value="number"></input>
                     </label>
@@ -51,9 +52,7 @@ export default class Filter extends Component{
                         string
                         <input onChange={this.selectedDatatype} type="checkbox" value="string"></input>
                     </label>
-                    <label>
-                        <input type="submit"></input>
-                    </label>
+                    <input type="submit" value="value"></input>
             </form>
         )
     }

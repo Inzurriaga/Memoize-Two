@@ -10,7 +10,12 @@ export default class MainContent extends Component{
                     this.props.page === "home" ?
                   <HomePage users={this.props.users}
                             user={this.props.user}/> :
-                  <TrainPage />  
+                            // i need to pass down a function to train for it to 
+                  <TrainPage users={this.props.users}
+                            user={this.props.user}
+                            Questiontoggle={this.props.Questiontoggle}
+                            toggleToQuestion={this.props.toggleToQuestion}
+                            selectedQuestion={this.props.selectedQuestion}/>  
                 }
             </div>
         )

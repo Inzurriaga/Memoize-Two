@@ -9,7 +9,9 @@ class App extends Component {
     this.state = {
       users: [],
       currentuser: undefined,
-      page: "home"
+      page: "home",
+      Questiontoggle: false,
+      selectedQuestion: {}
     }
   }
 
@@ -38,13 +40,22 @@ class App extends Component {
 
   signOut = () => {
     this.setState({
+      page: "home",
       currentuser: undefined
     })
   }
 
   togglePage = (page) => {
     this.setState({
-      page: page
+      page: page,
+      Questiontoggle: false
+    })
+  }
+
+  toggleToQuestion = (question) => {
+    this.setState({
+      Questiontoggle: true,
+      selectedQuestion: question
     })
   }
 
@@ -59,7 +70,10 @@ class App extends Component {
           <Login createNewAccount={this.createNewAccount} users={this.state.users} loginToAccount={this.loginToAccount}/> :
           <MainContent page={this.state.page}
                         user={this.state.currentuser}
-                        users={this.state.users}/>
+                        users={this.state.users}
+                        Questiontoggle={this.state.Questiontoggle}
+                        toggleToQuestion={this.toggleToQuestion}
+                        selectedQuestion={this.state.selectedQuestion}/>
         }
       </div>
     );

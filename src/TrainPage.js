@@ -7,27 +7,34 @@ export default class TrainPage extends Component{
     constructor(){
         super();
         this.state = {
-            toggle: false,
-            selectedQuestion: {}
+            selectedProgress: "",
+            selectedData: []
         }
     }
 
-    questionSelected = (question) => {
+    submitFilter = (data, progress) => {
         this.setState({
-            toggle: true,
-            selectedQuestion: question
+            selectedData: data,
+            selectedProgress: progress
         })
     }
+
     render(){
         return (
             <div>
                 {
-                    !this.state.toggle ?
+                    !this.props.Questiontoggle ?
                         <div>
-                            <Filter />
-                            <QuestionContainer questionSelected={this.questionSelected}/>
+                            <Filter submitFilter={this.submitFilter}/>
+                            <QuestionContainer questionSelected={this.questionSelected}
+                            selectedData={this.state.selectedData}
+                            selectedProgress={this.state.selectedProgress}
+                            user={this.props.user}
+                            toggleToQuestion={this.props.toggleToQuestion}/>
                         </div> :
-                        <QuestionElement question={this.state.selectedQuestion} />
+                        <QuestionElement question={this.props.selectedQuestion}
+                                        users={this.props.users}
+                                        user={this.props.user} />
                 }
             </div>
         )

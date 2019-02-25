@@ -27,11 +27,9 @@ export default class QuestionElement extends Component{
     }
 
     userinputsubmit = () => {
-        // let indexBeforeInvoke = this.state.userinput.indexOf("(")
-        // let invokeString = this.state.userinput.substr(0, indexBeforeInvoke)
-        // let functionName = invokeString.split(" ")[1]
         let outcome = eval(this.state.userinput)
         if(outcome === this.props.question.answer){
+            this.addToUserArray()
             this.setState({
                 correct: "Correct",
                 userOutcome: `expected ${this.props.question.answer}`,
@@ -46,15 +44,24 @@ export default class QuestionElement extends Component{
         }
     }
 
+    addToUserArray = () => {
+        if(!this.props.user.completed.includes(this.props.question.id)){
+            let indexOfUser = this.props.users.indexOf(this.props.user)
+            this.props.user.completed.push(this.props.question.id)
+            this.props.users.splice(indexOfUser, 1, this.props.user)
+            localStorage.setItem("player", JSON.stringify(this.props.users))
+        }
+    }
+
     render(){
         let borderColor;
         let textColor;
         if(this.state.correct === "Correct"){
-            borderColor = {border: "2px solid green"}
-            textColor = {color: "green"}
+            borderColor = {border: "2px solid rgb(65, 90, 70)"}
+            textColor = {color: "rgb(65, 90, 70)"}
         }else if(this.state.correct === "Wrong"){
-            borderColor = {border: "2px solid red"}
-            textColor = {color: "red"}
+            borderColor = {border: "2px solid rgb(65, 0, 0)"}
+            textColor = {color: "rgb(65, 0, 0)"}
         }else{
             borderColor= {border: "none"}
             textColor= {color: "none"}
