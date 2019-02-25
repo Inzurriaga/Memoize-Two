@@ -16,12 +16,9 @@ class App extends Component {
   componentDidMount() {
     let user = JSON.parse(localStorage.getItem("player"))
     if(user !== null){
-      console.log("there is players")
       this.setState({
         users: user
       })
-    }else{
-      console.log("there is no players")
     }
   }
 

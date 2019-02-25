@@ -7,16 +7,17 @@ export default class TrainPage extends Component{
     constructor(){
         super();
         this.state = {
-            toggle: false
+            toggle: false,
+            selectedQuestion: {}
         }
     }
 
-    QuestionSelected = (question) => {
+    questionSelected = (question) => {
         this.setState({
-            toggle: true
+            toggle: true,
+            selectedQuestion: question
         })
     }
-
     render(){
         return (
             <div>
@@ -24,9 +25,9 @@ export default class TrainPage extends Component{
                     !this.state.toggle ?
                         <div>
                             <Filter />
-                            <QuestionContainer QuestionSelected={this.QuestionSelected}/>
+                            <QuestionContainer questionSelected={this.questionSelected}/>
                         </div> :
-                        <QuestionElement />
+                        <QuestionElement question={this.state.selectedQuestion} />
                 }
             </div>
         )

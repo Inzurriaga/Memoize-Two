@@ -9,8 +9,8 @@ export default class QuestionContainer extends Component{
         }
     }
 
-    elementSelected = (question) => {
-        this.props.QuestionSelected(question)
+    questionSelected = (question) => {
+        this.props.questionSelected(question)
     }
 
     render(){
@@ -19,7 +19,8 @@ export default class QuestionContainer extends Component{
                 {
                     questions.map((question) => {
                         return(
-                            <li onClick={() => {this.elementSelected(question)}} key={question.id}>{question.title}</li>
+                            <li onClick={() => { this.questionSelected(question) }}
+                                 key={question.id}>{question.title}</li>
                         )
                     })
                 }

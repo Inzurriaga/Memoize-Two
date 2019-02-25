@@ -4,15 +4,15 @@ const questions = [
         type: "number",
         instructions: "return the number 5",
         answer: 5,
-        startup: "function number() {}",
+        startup: "function number() {\n//code here \n} \n\n number()",
         id: 1
     },
     {
         title: "return hello world",
         type: "string",
         instructions: "return a string of 'hello world'",
-        answer: "hello world",
-        startup: "function number() {}",
+        answer: 'hello world',
+        startup: "function string() {}",
         id: 2
     },
     {
@@ -20,7 +20,7 @@ const questions = [
         type: "object",
         instructions: "return an object that is empty",
         answer: {},
-        startup: "function number() {}",
+        startup: "function object() {}",
         id: 3
     },
     {
@@ -28,7 +28,7 @@ const questions = [
         type: "array",
         instructions: "return an array with three element of 1 2 3",
         answer: [1,2,3],
-        startup: "function number() {}",
+        startup: "function array() {}",
         id: 4
     },
     {
