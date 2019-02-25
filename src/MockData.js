@@ -18,8 +18,8 @@ const questions = [
     {
         title: "return object",
         type: "object",
-        instructions: "return an object that is empty",
-        answer: {},
+        instructions: "return an object that has a key of name with the value hello ",
+        answer: { name: "hello"},
         startup: "function object() {}",
         id: 3
     },

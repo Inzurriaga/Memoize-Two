@@ -4,7 +4,6 @@ class Player{
     constructor(name, password, avatar, ){
         this.name = name;
         this.password = password;
-        this.avatar = avatar;
         this.completed = []
     }
 }
@@ -15,8 +14,6 @@ export default class CreateAccount extends Component{
         this.state = {
             username: "",
             password: "",
-            avatarList: ["halo", "deadspace", "fallout", "strom", "rebel", "vader"],
-            avatar: ""
         }
     }
 
@@ -32,12 +29,6 @@ export default class CreateAccount extends Component{
         })
     }
 
-    avatar = e => {
-        this.setState({
-            avatar: e.target.value
-        })
-    }
-
     switchToLogin = () => {
         this.props.toggle()
     }
@@ -45,7 +36,7 @@ export default class CreateAccount extends Component{
     createAccount = e => {
         e.preventDefault()
         // add descructuring here
-        let player = new Player(this.state.username, this.state.password, this.state.avatar)
+        let player = new Player(this.state.username, this.state.password)
         this.props.createNewAccount(player)
     }
 
@@ -57,17 +48,6 @@ export default class CreateAccount extends Component{
                 <h2>CREATE ACCOUNT</h2>
                 <input onChange={this.username} type="text" placeholder="Username"></input>
                 <input onChange={this.password}  type="password" placeholder="Password"></input>
-                <h3>CHOOSE AVATAR</h3>
-                {
-                    this.state.avatarList.map((img, index) => {
-                        return (
-                            <label key={index}>
-                                {img}
-                                <input onChange={this.avatar} type="radio" name="avatar-icon" value={img}></input>
-                            </label>
-                        )
-                    })
-                }
                 <input type="submit" value="Create"></input>
             </form>
         )

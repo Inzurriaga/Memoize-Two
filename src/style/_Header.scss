@@ -1,8 +1,24 @@
 .header-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
     height: 80px;
     color: white;
     background-color: rgb(28, 28 ,28);
     h1{
         margin: 0px;
+    }
+    .page-button {
+        @include greenButton();
+        width: 120px;
+        height: 50px;
+        margin: 10px 50px;
+    }
+    .signout-button {
+        @include redButton();
+        width: 120px;
+        height: 50px;
+        font-size: 1em;
+        margin: 10px 50px;
     }
 }

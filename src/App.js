@@ -36,6 +36,12 @@ class App extends Component {
     })
   }
 
+  signOut = () => {
+    this.setState({
+      currentuser: undefined
+    })
+  }
+
   togglePage = (page) => {
     this.setState({
       page: page
@@ -47,7 +53,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header togglePage={this.togglePage}
-                user={this.state.currentuser}/>
+                user={this.state.currentuser}
+                signOut={this.signOut}/>
         { !this.state.currentuser ? 
           <Login createNewAccount={this.createNewAccount} users={this.state.users} loginToAccount={this.loginToAccount}/> :
           <MainContent page={this.state.page}

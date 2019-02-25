@@ -1,0 +1,58 @@
+@mixin basicBoxStructure() {
+    padding: 40px;
+    background-color: rgb(28, 28 ,28);
+    color: white;
+    border-radius: 25px;
+}
+
+@mixin greenButton() {
+    outline: none;
+    color: white;
+    background-color: rgb(28, 28 ,28);
+    border: 2px solid rgb(65, 90, 70);
+    text-align: center;
+    border-radius: 50px;
+    &:hover {
+        background-color: rgb(41, 41, 41);
+        cursor: pointer;
+    }
+}
+
+@mixin blueButton() {
+    outline: none;
+    color: white;
+    text-align: center;
+    border: 2px solid rgb(50, 65, 80);
+    background-color: rgb(28, 28 ,28);
+    border-radius: 50px;
+    &:hover {
+        background-color: rgb(41, 41, 41);
+        cursor: pointer;
+    }
+}
+
+@mixin orangeButton() {
+    outline: none;
+    color: white;
+    background-color: rgb(28, 28 ,28);
+    border: 2px solid rgb(144, 77, 0);
+    text-align: center;
+    border-radius: 50px;
+    &:hover {
+        background-color: rgb(41, 41, 41);
+        cursor: pointer;
+    }
+}
+
+@mixin redButton() {
+    outline: none;
+    color: white;
+    background-color: rgb(28, 28 ,28);
+    border: 2px solid rgb(65, 0, 0);
+    text-align: center;
+    border-radius: 50px;
+    &:hover {
+        background-color: rgb(41, 41, 41);
+        cursor: pointer;
+    }
+}

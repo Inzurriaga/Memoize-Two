@@ -18,15 +18,20 @@ export default class Header extends Component{
         this.props.togglePage(e.target.value)
     }
 
+    signOut = () => {
+        this.props.signOut()
+    }
+
     render(){
         if(this.props.user !== undefined){
         return(
             <div className="header-section">
                     <h1>Title here</h1>
                     <nav>
-                    <input onClick={this.togglePage} type="button" value="home"></input>
-                    <input onClick={this.togglePage} type="button" value="train"></input>
+                        <input className="page-button" onClick={this.togglePage} type="button" value="home"></input>
+                        <input className="page-button" onClick={this.togglePage} type="button" value="train"></input>
                     </nav>
+                    <input  onClick={this.signOut} className="signout-button" type="button" value="SIGN OUT"></input>
             </div>
         )
         }else{
