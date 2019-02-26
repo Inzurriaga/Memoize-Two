@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn should match a Snap shot 1`] = `
+<form
+  className="signin-section"
+  onSubmit={[Function]}
+>
+  <input
+    onClick={[Function]}
+    type="button"
+    value="create account"
+  />
+  <h2>
+    LOGIN
+  </h2>
+  <input
+    onChange={[Function]}
+    placeholder="Username"
+    type="text"
+  />
+  <input
+    onChange={[Function]}
+    placeholder="Password"
+    type="password"
+  />
+  <input
+    type="submit"
+    value="Log In"
+  />
+</form>
+`;
