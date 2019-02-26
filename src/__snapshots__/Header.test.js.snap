@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should hide buttons if no player is sign in 1`] = `
+<div
+  className="header-section"
+>
+  <h1>
+    Title here
+  </h1>
+</div>
+`;
+
+exports[`Header should match Snap shot 1`] = `
+<div
+  className="header-section"
+>
+  <h1>
+    Title here
+  </h1>
+  <nav>
+    <input
+      className="page-button"
+      onClick={[Function]}
+      type="button"
+      value="home"
+    />
+    <input
+      className="page-button"
+      onClick={[Function]}
+      type="button"
+      value="train"
+    />
+  </nav>
+  <input
+    className="signout-button"
+    onClick={[Function]}
+    type="button"
+    value="SIGN OUT"
+  />
+</div>
+`;

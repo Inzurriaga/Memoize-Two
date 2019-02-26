@@ -1,19 +1,6 @@
 import React, { Component} from "react"
-// import halo from "./images/halo.png"
-// import halo from "./images/halo.png"
-// import  "./images/halo.png"
-// import "./images/halo.png"
-// import "./images/halo.png"
-// import "./images/halo.png"
 
 export default class Header extends Component{
-    constructor(){
-        super();
-        this.state = {
-            true: true
-        }
-    }
-
     togglePage = e => {
         this.props.togglePage(e.target.value)
     }
