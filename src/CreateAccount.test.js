@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from "./App"
+import CreateAccount from "./CreateAccount"
 
-describe("App", ()=> {
+describe("CreateAccount", ()=> {
   it("should pass test", () => {
     expect(true).toEqual(true)
   })

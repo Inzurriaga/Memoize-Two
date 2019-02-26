@@ -24,12 +24,14 @@ export default class login extends Component{
 
     render() {
         return(
-            <div className="login-section" style={{transform: this.state.toggleLogin }}>
-               <SignIn toggle={this.toggleLoginOption} 
-                        users={this.props.users} 
-                        loginToAccount={this.props.loginToAccount}/>
-               <CreateAccount toggle={this.toggleLoginOption}
-                            createNewAccount={this.props.createNewAccount} users={this.props.users}/>
+            <div className="login-position">
+                <div className="login-section" style={{transform: this.state.toggleLogin }}>
+                <SignIn toggle={this.toggleLoginOption} 
+                            users={this.props.users} 
+                            loginToAccount={this.props.loginToAccount}/>
+                <CreateAccount toggle={this.toggleLoginOption}
+                                createNewAccount={this.props.createNewAccount} users={this.props.users}/>
+                </div>
             </div>
         )
     }

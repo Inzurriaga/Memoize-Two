@@ -6,7 +6,8 @@
     color: white;
     background-color: rgb(28, 28 ,28);
     h1{
-        margin: 0px;
+        margin: 17px;
+        margin-left: 60px;
     }
     .page-button {
         @include greenButton();

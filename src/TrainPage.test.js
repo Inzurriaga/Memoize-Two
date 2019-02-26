@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from "./App"
+import TrainPage from "./TrainPage"
 
-describe("App", ()=> {
+describe("TrainPage", ()=> {
   it("should pass test", () => {
     expect(true).toEqual(true)
   })

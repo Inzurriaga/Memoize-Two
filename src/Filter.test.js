@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from "./App"
+import Filter from "./App"
 
-describe("App", ()=> {
+describe("Filter", ()=> {
   it("should pass test", () => {
     expect(true).toEqual(true)
   })
