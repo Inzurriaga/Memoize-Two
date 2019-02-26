@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should  match Snap shot 1`] = `
+<div
+  className="login-position"
+>
+  <div
+    className="login-section"
+    style={
+      Object {
+        "transform": "rotateY(0deg)",
+      }
+    }
+  >
+    <SignIn
+      loginToAccount={[MockFunction]}
+      toggle={[Function]}
+      users={
+        Array [
+          Object {
+            "completed": Array [
+              1,
+              2,
+              5,
+            ],
+            "name": "duy",
+            "password": "duy",
+          },
+          Object {
+            "completed": Array [
+              1,
+              2,
+              5,
+            ],
+            "name": "gabriel",
+            "password": "gabriel",
+          },
+          Object {
+            "completed": Array [
+              1,
+              2,
+            ],
+            "name": "isaac",
+            "password": "isaac",
+          },
+        ]
+      }
+    />
+    <CreateAccount
+      createNewAccount={[MockFunction]}
+      toggle={[Function]}
+      users={
+        Array [
+          Object {
+            "completed": Array [
+              1,
+              2,
+              5,
+            ],
+            "name": "duy",
+            "password": "duy",
+          },
+          Object {
+            "completed": Array [
+              1,
+              2,
+              5,
+            ],
+            "name": "gabriel",
+            "password": "gabriel",
+          },
+          Object {
+            "completed": Array [
+              1,
+              2,
+            ],
+            "name": "isaac",
+            "password": "isaac",
+          },
+        ]
+      }
+    />
+  </div>
+</div>
+`;

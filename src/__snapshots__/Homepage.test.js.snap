@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage should have a snapshot 1`] = `
+<div>
+  <PlayerStatus
+    user={
+      Object {
+        "completed": Array [
+          1,
+          2,
+          5,
+        ],
+        "name": "gabriel",
+        "password": "gabriel",
+      }
+    }
+  />
+  <RankContainer
+    users={
+      Array [
+        Object {
+          "completed": Array [
+            1,
+            2,
+            5,
+          ],
+          "name": "duy",
+          "password": "duy",
+        },
+        Object {
+          "completed": Array [
+            1,
+            2,
+            5,
+          ],
+          "name": "gabriel",
+          "password": "gabriel",
+        },
+        Object {
+          "completed": Array [
+            1,
+            2,
+          ],
+          "name": "isaac",
+          "password": "isaac",
+        },
+      ]
+    }
+  />
+</div>
+`;

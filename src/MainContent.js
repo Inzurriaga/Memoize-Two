@@ -1,23 +1,20 @@
-import React, { Component } from "react"
+import React from "react"
 import HomePage from "./Homepage"
 import TrainPage from "./TrainPage"
 
-export default class MainContent extends Component{
-    render(){
+export default function MainContent(props){
         return(
             <div>
                 {
-                    this.props.page === "home" ?
-                  <HomePage users={this.props.users}
-                            user={this.props.user}/> :
-                            // i need to pass down a function to train for it to 
-                  <TrainPage users={this.props.users}
-                            user={this.props.user}
-                            Questiontoggle={this.props.Questiontoggle}
-                            toggleToQuestion={this.props.toggleToQuestion}
-                            selectedQuestion={this.props.selectedQuestion}/>  
+                    props.page === "home" ?
+                  <HomePage users={props.users}
+                            user={props.user}/> :
+                  <TrainPage users={props.users}
+                            user={props.user}
+                            Questiontoggle={props.Questiontoggle}
+                            toggleToQuestion={props.toggleToQuestion}
+                            selectedQuestion={props.selectedQuestion}/>  
                 }
             </div>
         )
-    }
 }

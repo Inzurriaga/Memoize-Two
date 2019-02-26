@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContent should have a snapshot 1`] = `
+<div>
+  <HomePage
+    user={
+      Object {
+        "completed": Array [
+          1,
+          2,
+          5,
+        ],
+        "name": "gabriel",
+        "password": "gabriel",
+      }
+    }
+    users={
+      Array [
+        Object {
+          "completed": Array [
+            1,
+            2,
+            5,
+          ],
+          "name": "duy",
+          "password": "duy",
+        },
+        Object {
+          "completed": Array [
+            1,
+            2,
+            5,
+          ],
+          "name": "gabriel",
+          "password": "gabriel",
+        },
+        Object {
+          "completed": Array [
+            1,
+            2,
+          ],
+          "name": "isaac",
+          "password": "isaac",
+        },
+      ]
+    }
+  />
+</div>
+`;
