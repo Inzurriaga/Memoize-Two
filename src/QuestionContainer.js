@@ -5,7 +5,6 @@ export default class QuestionContainer extends Component{
     questionSelected = (question) => {
         this.props.toggleToQuestion(question)
     }
-
     render(){
         return(
             <ul className="questionContainer-section">

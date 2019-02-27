@@ -5,7 +5,7 @@ exports[`Header should hide buttons if no player is sign in 1`] = `
   className="header-section"
 >
   <h1>
-    Title here
+    Javascript War
   </h1>
 </div>
 `;
@@ -15,7 +15,7 @@ exports[`Header should match Snap shot 1`] = `
   className="header-section"
 >
   <h1>
-    Title here
+    Javascript War
   </h1>
   <nav>
     <input

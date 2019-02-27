@@ -5,13 +5,10 @@
 }
 
 .instructions {
+    @include basicBoxStructure();
     position: relative;
-    color: white;
-    background-color: rgb(28, 28 ,28);
-    border-radius: 25px;
     width: 40%;
     box-sizing: border-box;
-    padding: 20px;
 }
 
 .editor {

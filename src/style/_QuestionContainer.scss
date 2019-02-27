@@ -1,13 +1,8 @@
 .questionContainer-section {
-    color: white;
-    background-color: rgb(28, 28 ,28);
-    border-radius: 25px;
+    @include basicBoxStructure();
     width: 60%;
     box-sizing: border-box;
-    position: absolute;
-    right: 100px;
-    padding: 30px;
-    top: 130px;
+    margin: 10px auto;
     li{
         font-size: 1.5em;
         list-style-type: none;

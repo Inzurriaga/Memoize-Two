@@ -13,7 +13,7 @@ export default class Header extends Component{
         if(this.props.user !== undefined){
         return(
             <div className="header-section">
-                    <h1>Title here</h1>
+                    <h1>Javascript War</h1>
                     <nav>
                         <input className="page-button" onClick={this.togglePage} type="button" value="home"></input>
                         <input className="page-button" onClick={this.togglePage} type="button" value="train"></input>
@@ -24,7 +24,7 @@ export default class Header extends Component{
         }else{
             return(
                 <div className="header-section">
-                    <h1>Title here</h1>
+                    <h1>Javascript War</h1>
                 </div>
             ) 
         }

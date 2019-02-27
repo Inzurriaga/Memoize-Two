@@ -1,10 +1,7 @@
 .rank-section {
-    color: white;
-    padding: 20px;
-    background-color: rgb(28, 28 ,28);
+    @include basicBoxStructure();
     width: 80%;
     margin: 10px auto;
-    border-radius: 25px;
     ul{
         li {
             display: flex;

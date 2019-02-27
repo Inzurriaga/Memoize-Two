@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionElement should match snap shot 1`] = `
+<div
+  className="questionElement-section"
+>
+  <section
+    className="instructions"
+  >
+    <h2>
+      Instructions
+    </h2>
+    <p>
+      return the number 5
+    </p>
+    <div
+      className="result"
+      style={
+        Object {
+          "border": "none",
+        }
+      }
+    >
+      <h2>
+        RESULTS
+      </h2>
+      <p
+        style={
+          Object {
+            "color": "none",
+          }
+        }
+      />
+      <p
+        className="right-answer"
+      />
+      <p
+        style={
+          Object {
+            "color": "none",
+          }
+        }
+      />
+    </div>
+  </section>
+  <div>
+    <ReactAce
+      className="editor"
+      cursorStart={1}
+      editorProps={Object {}}
+      enableBasicAutocompletion={false}
+      enableLiveAutocompletion={false}
+      focus={false}
+      fontSize={14}
+      height="500px"
+      highlightActiveLine={true}
+      maxLines={null}
+      minLines={null}
+      mode="javascript"
+      name="blah2"
+      onChange={[Function]}
+      onLoad={null}
+      onPaste={null}
+      onScroll={null}
+      readOnly={false}
+      scrollMargin={
+        Array [
+          0,
+          0,
+          0,
+          0,
+        ]
+      }
+      setOptions={
+        Object {
+          "showLineNumbers": true,
+          "tabSize": 2,
+        }
+      }
+      showGutter={true}
+      showPrintMargin={true}
+      style={Object {}}
+      tabSize={4}
+      theme="monokai"
+      value="function number() {
+//code here 
+} 
+
+ number()"
+      width="500px"
+      wrapEnabled={false}
+    />
+    <div
+      className="submit"
+    >
+      <input
+        onClick={[Function]}
+        type="button"
+        value="submit"
+      />
+    </div>
+  </div>
+</div>
+`;

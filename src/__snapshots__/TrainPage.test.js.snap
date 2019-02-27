@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrainPage should match Snap Shot 1`] = `
+<div>
+  <div>
+    <QuestionContainer
+      toggleToQuestion={[MockFunction]}
+      user={
+        Object {
+          "completed": Array [
+            1,
+            2,
+            5,
+          ],
+          "name": "gabriel",
+          "password": "gabriel",
+        }
+      }
+    />
+  </div>
+</div>
+`;

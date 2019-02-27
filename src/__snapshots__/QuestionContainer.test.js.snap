@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionContainer should match Snap shot 1`] = `
+<ul
+  className="questionContainer-section"
+>
+  <li
+    className="user-completed"
+    key="1"
+    onClick={[Function]}
+  >
+    number return 5
+  </li>
+  <li
+    className="user-completed"
+    key="2"
+    onClick={[Function]}
+  >
+    return hello world
+  </li>
+  <li
+    className="user-notCompleted"
+    key="4"
+    onClick={[Function]}
+  >
+    return an array
+  </li>
+  <li
+    className="user-completed"
+    key="5"
+    onClick={[Function]}
+  >
+    number return a 3
+  </li>
+</ul>
+`;
+
+exports[`QuestionContainer should show the li as green if player already answer the question 1`] = `
+<ul
+  className="questionContainer-section"
+>
+  <li
+    className="user-notCompleted"
+    key="1"
+    onClick={[Function]}
+  >
+    number return 5
+  </li>
+  <li
+    className="user-notCompleted"
+    key="2"
+    onClick={[Function]}
+  >
+    return hello world
+  </li>
+  <li
+    className="user-notCompleted"
+    key="4"
+    onClick={[Function]}
+  >
+    return an array
+  </li>
+  <li
+    className="user-notCompleted"
+    key="5"
+    onClick={[Function]}
+  >
+    number return a 3
+  </li>
+</ul>
+`;
